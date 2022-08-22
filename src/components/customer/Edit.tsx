@@ -1,6 +1,5 @@
 import * as React from 'react'; 
-import { RouteComponentProps, withRouter } from 
-'react-router-dom'; 
+import { RouteComponentProps, withRouter } from 'react-router-dom'; 
 import axios from 'axios'; 
 
 export interface IValues {
@@ -35,7 +34,7 @@ public componentDidMount(): void {
     }
 
     private setValues = (values: IValues) => {
-        this.setState({ values: { ...this.state.values, ...values } });
+        this.setState({ values: {this.state.values, values } });
     }
     private handleInputChanges = (e: React.FormEvent<HTMLInputElement>) => {
         e.preventDefault();

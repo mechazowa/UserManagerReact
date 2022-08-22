@@ -28,7 +28,7 @@ private processFormSubmission = (e: React.FormEvent<HTMLFormElement>): void => {
               address: this.state.address,
               description: this.state.description,
           }
-          this.setState({ submitSuccess: true, values: [...this.state.values, formData], loading: false });
+          this.setState({ submitSuccess: true, values: [this.state.values, formData], loading: false });
           axios.post(`http://localhost:5000/customers`, formData).then(data => [
               setTimeout(() => {
                   this.props.history.push('/');
